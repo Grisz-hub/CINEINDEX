@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #0f1720;
+    color: #f5f5f5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:focus-visible {
+    outline: 3px solid #ff4565;
+    outline-offset: 3px;
+}
+
+.pagina-filme {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: 32px 24px 56px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 32px;
+    color: #ff6b82;
+    font-weight: 600;
+}
+
+.voltar:hover {
+    color: #fff;
+}
+
+.filme {
+    display: grid;
+    grid-template-columns: minmax(190px, 280px) minmax(0, 1fr);
+    align-items: start;
+    gap: 36px;
+}
+
+.filme-poster {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    background: #1a232b;
+}
+
+.filme-conteudo {
+    min-width: 0;
+}
+
+.etiqueta {
+    margin-bottom: 10px;
+    color: #ff4565;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.genero {
+    margin-bottom: 22px;
+    color: #aeb8c2;
+}
+
+.sinopse {
+    margin-bottom: 30px;
+    color: #d3d9df;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+h2 {
+    margin-bottom: 14px;
+    font-size: 1.3rem;
+}
+
+.trailer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    background: #000;
+}
+
+.trailer iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.link-trailer {
+    display: inline-block;
+    margin-top: 12px;
+    color: #ff6b82;
+    font-weight: 600;
+}
+
+.link-trailer:hover {
+    color: #fff;
+}
+
+html[data-theme="light"] body {
+    background: #f4f6f8;
+    color: #20242a;
+}
+
+html[data-theme="light"] .sinopse {
+    color: #3d454d;
+}
+
+html[data-theme="light"] .genero {
+    color: #5d6670;
+}
+
+@media (max-width: 650px) {
+    .pagina-filme {
+        padding: 24px 16px 40px;
+    }
+
+    .filme {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .filme-poster {
+        width: min(220px, 70%);
+    }
+}
